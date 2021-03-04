@@ -75,7 +75,7 @@ func ProcessReduceTask(task Task, reducef func(string, []string) string) {
 	if err != nil {
 		log.Panicf("list file fail: %v", err)
 	}
-	list, err := f.ReadDir(-1)
+	list, err := f.Readdir(-1)
 	f.Close()
 	taskFileName := []string{}
 
